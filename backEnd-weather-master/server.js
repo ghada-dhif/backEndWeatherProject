@@ -5,6 +5,12 @@ const axios = require("axios").default;
 const cors = require('cors');
 
 const server = require('http').Server(app)
+const io = require('socket.io')(server, {
+    cors: {
+        origin: "http://localhost:8080",
+        methods: ["GET", "POST"]
+    }
+})
 
 app.use(bodyParser.json())
 app.use(cors())
