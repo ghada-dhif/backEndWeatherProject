@@ -24,7 +24,7 @@ app.get("/", function (req, res) {
 app.get("/json", function (req, res) {
   res.status(200).json({ message: "ok" });
 });
-
+// create cities
 let cities = [];
 getAllCities().then((res) => {
   cities = res.data
