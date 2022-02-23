@@ -17,6 +17,10 @@ app.get('/json', function (req, res) {
    res.status(200).json({"message":"ok"})
 })
 
+function getWeather(city) {
+    return axios({url: `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=7416d45e0fc4254f5c8e7bbb442f0b47`})
+}
+
 async function getAllCities(){
     return  axios({url: `https://restcountries.com/v2/all`})
  }
