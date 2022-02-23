@@ -58,7 +58,6 @@ function getWeather(city) {
 async function getAllCities() {
   return axios({ url: `https://restcountries.com/v2/all` });
 }
-
 // Server start
 server.listen(3001, function () {
   console.log("Votre app est disponible sur localhost:3001 !");
